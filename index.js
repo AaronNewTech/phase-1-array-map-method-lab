@@ -12,5 +12,17 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
+  // we are writing funcitons in starting at the bottom because they callback functions 
+
+  // this function replaces the first letter of each word in the sentence looking for b regex which is for word boundaries followed by w to select the word. Then it passes the word into the match variable to make it uppercase. It is returned to the 
+  const capitalizeWords = (str) => {
+    return str.replace(/\b\w/g, (match) => match.toUpperCase())
+  }
+  // helper function takes the array tutorials and assigns it to arr, then calls map function but map function first calls capitalizeWords function to capitalize each 
+  const assembleArray = (arr) => {
+    return arr.map((str) => capitalizeWords(str))
+  }
+
+  return assembleArray(tutorials)
+
 }
