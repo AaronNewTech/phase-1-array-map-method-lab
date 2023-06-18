@@ -19,6 +19,8 @@ const titleCased = () => {
     return str.replace(/\b\w/g, (match) => match.toUpperCase())
   }
   // helper function takes the array tutorials and assigns it to arr, then calls map function but map function first calls capitalizeWords function to capitalize each 
+
+  
   const assembleArray = (arr) => {
     return arr.map((str) => capitalizeWords(str))
   }
